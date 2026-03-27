@@ -11,6 +11,13 @@ export default function Home() {
        
        {/* Hero Section */}     
       <section id="hero" className="bg-[#F8FAFC] py-24 px-6 text-center">
+        <div className="flex justify-center mb-6">
+          <img
+            src="/Kanyonyo-removebg.png"
+            alt="Kanyonyo logo"
+            className="h-32 md:h-40 w-auto opacity-90 animate-slide-in"
+          />
+        </div>
         <h1 className="text-4xl md:text-5xl font-bold text-[#0B1F3A] mb-6">
           Professional Accounting & Tax Services
         </h1>

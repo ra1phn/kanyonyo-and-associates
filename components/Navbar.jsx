@@ -2,7 +2,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md py-4 px-6 flex justify-between items-center sticky top-0 z-50">
   <div className="flex items-center gap-3 text-xl font-bold">
-    <img src="/Kanyonyo.png" alt="CPA Firm Logo" className="h-8 w-auto" />
+    <img src="/Kanyonyo-removebg.png" alt="CPA Firm Logo" className="h-8 w-auto" />
     <span>Kanyonyo and Associates CPA</span>
   </div>
   <div className="flex gap-6">
