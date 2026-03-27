@@ -29,14 +29,7 @@ export default function Home() {
             transition={{ duration: 0.25 }}
           />
         </motion.div>
-        <motion.h1
-          className="text-4xl md:text-6xl font-bold text-[#0B1F3A] mb-6"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          Trusted Accounting & Tax Solutions for Individuals & Businesses
-        </motion.h1>
+
 
         <p className="text-gray-600 text-lg md:text-xl mb-6 max-w-xl mx-auto">
           Reliable, affordable, and professional CPA services tailored to your needs.

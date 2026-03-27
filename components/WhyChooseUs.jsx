@@ -1,30 +1,53 @@
+"use client";
+import { motion } from "framer-motion";
+import { fadeInUp, staggerContainer } from "./animations";
+
 export default function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-24 px-6 bg-white text-center">
-      <h2 className="text-3xl font-bold text-[#0B1F3A] mb-12">
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      id="why-choose-us"
+      className="py-16"
+    >
+      <motion.h2
+        variants={fadeInUp}
+        className="text-3xl font-bold text-center mb-10"
+      >
         Why Choose Us
-      </h2>
+      </motion.h2>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div className="p-6 border rounded-lg shadow-sm hover:shadow-lg transition">
-          <h3 className="text-xl font-semibold mb-4">Affordable Pricing</h3>
+      <div className="grid md:grid-cols-3 gap-8">
+        <motion.div
+          variants={fadeInUp}
+          className="p-6 rounded-2xl shadow-md bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+        >
+          <h3 className="text-xl font-semibold mb-2">Affordable Pricing</h3>
           <p className="text-gray-600">
             High-quality services without breaking the bank.
           </p>
-        </div>
-        <div className="p-6 border rounded-lg shadow-sm hover:shadow-lg transition">
-          <h3 className="text-xl font-semibold mb-4">Professional Expertise</h3>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="p-6 rounded-2xl shadow-md bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+        >
+          <h3 className="text-xl font-semibold mb-2">Professional Expertise</h3>
           <p className="text-gray-600">
             Handled by experienced and certified professionals.
           </p>
-        </div>
-        <div className="p-6 border rounded-lg shadow-sm hover:shadow-lg transition">
-          <h3 className="text-xl font-semibold mb-4">Client-Focused</h3>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="p-6 rounded-2xl shadow-md bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+        >
+          <h3 className="text-xl font-semibold mb-2">Client-Focused</h3>
           <p className="text-gray-600">
             We tailor solutions to your unique needs.
           </p>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
