@@ -1,4 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
+import WhyChooseUs from "../../components/WhyChooseUs";
 import Services from "../../components/Services";
 import About from "../../components/About";
 import Contact from "../../components/Contact";
@@ -11,19 +15,37 @@ export default function Home() {
        
        {/* Hero Section */}     
       <section id="hero" className="bg-[#F8FAFC] py-24 px-6 text-center">
-        <div className="flex justify-center mb-6">
-          <img
+        <motion.div
+          className="flex justify-center mb-6"
+          initial={{ opacity: 0, y: -24, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+        >
+          <motion.img
             src="/Kanyonyo-removebg.png"
             alt="Kanyonyo logo"
-            className="h-32 md:h-40 w-auto opacity-90 animate-slide-in"
+            className="h-32 md:h-40 w-auto opacity-90"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.25 }}
           />
-        </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-[#0B1F3A] mb-6">
-          Professional Accounting & Tax Services
-        </h1>
-        <p className="text-gray-600 text-lg md:text-xl mb-8 max-w-xl mx-auto">
-          Helping individuals and businesses stay compliant, organised, and financially confident.
+        </motion.div>
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-[#0B1F3A] mb-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          Trusted Accounting & Tax Solutions for Individuals & Businesses
+        </motion.h1>
+
+        <p className="text-gray-600 text-lg md:text-xl mb-6 max-w-xl mx-auto">
+          Reliable, affordable, and professional CPA services tailored to your needs.
         </p>
+
+        <p className="text-sm text-gray-500 mb-8">
+          ✔ Registered Professionals | ✔ Affordable Pricing | ✔ Fast Turnaround
+        </p>
+
         <div className="flex justify-center gap-6">
           <a
             href="#contact"
@@ -40,16 +62,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="bg-white py-20 px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#0B1F3A] mb-4">Why choose us</h2>
-        <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
-          Kanyonyo Associates are a leading partner for financial audit, services and association.
-        </p>
+      <section id="services">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <Services />
+        </motion.div>
       </section>
 
-      <section id="services">
-        <Services />
-      </section>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <WhyChooseUs />
+      </motion.div>
 
       <section id="about">
         <About />

@@ -5,7 +5,7 @@ export default function Contact() {
         Get in Touch
       </h2>
       <p className="text-gray-600 mb-8">
-        Have questions or want to book a consultation? Reach out to us and we'll get back to you promptly.
+        Have questions or want to book a consultation? Reach out to us and we will get back to you promptly.
       </p>
       <div className="flex flex-col md:flex-row justify-center gap-6 max-w-xl mx-auto">
         <a
